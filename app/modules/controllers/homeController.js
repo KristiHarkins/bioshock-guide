@@ -6,7 +6,7 @@ var Home = function(){
 
     this.response = function(action, req, res, next){
         this[action](req, res, next);
-    }
+    };
 };
 
 Home.prototype.home = function(req, res, next){
@@ -22,9 +22,9 @@ Home.prototype.home = function(req, res, next){
             };
             res.render('home', object);
         }else{
-            console.log('something wrong has happened, calling the service !');
+            console.log('something went wrong!');
         }
     });
-}
+};
 
 module.exports = Home;

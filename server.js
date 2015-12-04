@@ -1,7 +1,7 @@
 var http = require('http'),
+    mongoose = require('mongoose'),
     conf = require('./config/conf'),
     mLab = conf.mongoLab,
-    mongoose = require('mongoose'),
     expressServer = require('./config/expressServer'),
     env = process.env.NODE_ENV || 'production';
 

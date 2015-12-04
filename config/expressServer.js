@@ -41,7 +41,7 @@ var ExpressServer = function(config){
         this.expressServer.use(middlewares[middleware]);
     }
 
-    //tell express we are goind to use swig
+    //tell express we are going to use swig
     this.expressServer.engine('html', swig.renderFile);
     this.expressServer.set('view engine', 'html');
     swig.setDefaults({ varControls: ['[[', ']]'] });
