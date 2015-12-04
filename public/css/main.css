@@ -1,0 +1,217 @@
+/* ==========================================================================
+   Rigo's custom styles
+   ========================================================================== */
+body{
+    background: url('/images/home-bg.jpg');
+}
+
+h3.panel-title{
+    font-size: 22px;
+}
+
+h3.thumbnail-label{
+    color:#2e6da4;
+    word-break: break-word;
+    max-height: 75px;
+    overflow: hidden;
+    display: inline;
+    margin-bottom: 5px;
+}
+
+div.caption p{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+span.tag{
+    display: inline-block;
+    cursor: pointer;
+}
+
+a.glyphicon-edit, a.glyphicon-trash{
+    background-image: none;
+}
+
+.container .jumbotron{
+    margin-top: 15px;
+    background: ghostwhite;
+}
+
+
+.container .author-container{
+    position: relative;
+    text-align: center;
+    background: ghostwhite;
+    padding: 15px;
+    border-radius: 7px;
+}
+
+.caption-list{
+    height: 270px;
+}
+
+.home-caption{
+    height: 190px !important;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.autor-image{
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin: 0;
+    max-width: 96px;
+}
+
+.no-background-image{
+    background-image:none;
+}
+
+.display-block{
+    display: block;
+}
+
+.fix-vertical-button{
+    left: -3px;
+}
+
+.fm-elements{
+    margin-bottom: 15px;
+}
+
+button{
+    margin: 3px;
+}
+
+input.ng-invalid.ng-dirty,
+textarea.ng-invalid.ng-dirty,
+div.ng-invalid.ng-dirty{
+    border: 1px solid #D72704;
+}
+
+.jumbotron p{
+    margin-bottom: 5px;
+}
+
+p.article-title{
+    font-size: 25px;
+}
+
+p.article-date{
+    font-family: inherit;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #676767;
+    margin-bottom: 25px;
+}
+
+.bootstrap-tagsinput .tag {
+    margin-right: 2px;
+    color: white;
+}
+
+.panel-body{
+    min-height: 300px;
+}
+
+.removing {
+    -webkit-animation: fadeOut 5000ms;
+    -moz-animation: fadeOut 5000ms;
+    animation: fadeOut 5000ms;
+}
+
+time.comments{
+    float: right;
+    font-size: 11px;
+    color: #555;
+}
+
+div.login-buttons{
+    z-index: 100;
+}
+
+a.btn-twitter{
+    background: #3B94D9;
+    border-color: #3B94D9;
+}
+
+.glyphicon-trash{
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+button.search{
+    margin: 0px;
+}
+
+@media screen and (min-width: 768px){
+    .jumbotron .h1, .jumbotron h1 {
+        font-size: 50px !important;
+    }
+
+    .container .jumbotron{
+        margin-left: 150px;
+    }
+
+    div.panel-normal{
+        margin-left: 0px !important;
+        margin-top: 5px;
+    }
+
+    .container .author-container{
+        position: fixed;
+        top: 110px;
+        max-width:202px;
+    }
+
+    /*comments*/
+    div.comments-form{
+        width: 65%;
+        margin-top: 30px;
+    }
+
+    div.show-comments{
+        margin-top: 100px;
+        width: 65%;
+    }
+
+    div.show-comments figure{
+        position: absolute;
+    }
+
+    div.show-comments div.content{
+        padding-left: 50px;
+        margin-top: -5px;
+    }
+
+    div.home-articles{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    div.thumbnail{
+        padding: 20px 10px 30px 10px;
+    }
+
+    p.article-desc{
+        min-height: 70px;
+    }
+
+    div.home-tags{
+        position: absolute;
+        top: 210px;
+    }
+
+    div.home-float-bg{
+        background-color: darkred;
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        height: 160px;
+        z-index: -1;
+    }
+
+}

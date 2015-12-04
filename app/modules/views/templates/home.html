@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% if user == null %}
+    <div class="login-buttons">
+        <a class="btn btn-primary btn-lg btn-twitter" href="/auth/twitter">Login Twitter</a>
+        <a class="btn btn-primary btn-lg" href="/auth/facebook">Login Facebook</a>
+    </div>
+{% endif %}
+
+    <div class="panel-normal">
+        <div class="panel panel-{{panel}}" ng-view>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="../css/default.min.css">
+    <script src="../libs/highlight.min.js"></script>
+
+
+    <script src="../libs/angular.min.js"></script>
+    <script src="../libs/angular-route.min.js"></script>
+    <script src="../libs/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../libs/ng-tags-input/ng-tags-input.min.js"></script>
+    <script src="../libs/ui-bootstrap-custom-tpls-0.12.1.min.js"></script>
+
+    <script src="../js/public_main.js"></script>
+
+    <script src="../js/controllers/homeController.js"></script>
+    <script src="../js/controllers/showArticleController.js"></script>
+    <script src="../js/controllers/showAuthorController.js"></script>
+    <script src="../js/controllers/navBarController.js"></script>
+
+    <script src="../js/directives.js"></script>
+    <script src="../js/filters.js"></script>
+    <script src="../js/services.js"></script>
+
+{% endblock %}

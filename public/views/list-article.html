@@ -1,0 +1,37 @@
+<div class="panel-body">
+    <info-message></info-message>
+    <h2 ng-show="!articles.none">
+        List of Articles
+    </h2>
+
+    <div ng-show="articles.none">
+        <h1 id="hello,-world!">
+            Welcome to SlimWiki
+            <a class="anchorjs-link" href="#"><span class="anchorjs-icon"></span></a></h1>
+            <p>
+                You can start creating a new article clicking in the button below. Choose between more than 20 code sintax and share it with your partners .
+            </p>
+            <p><a class="btn btn-primary btn-lg" href="/dashboard/#/createArticle/" role="button">Create a new Article</a></p>
+    </div>
+
+    <div class="col-sm-12 col-md-4 removing" ng-repeat="article in articles" id="a_{{article._id}}">
+        <div class="thumbnail">
+          <div class="caption caption-list">
+            <a href="javascript:void(0)" ng-click="open('sm', article)" class="btn btn-default btn-sm glyphicon glyphicon-trash pull-right"></a>
+            <a href="/dashboard/#/updateArticle/{{article.permalink}}" class="btn btn-default btn-sm glyphicon glyphicon-edit pull-right"></a>
+            <h3 class="thumbnail-label cursor-pointer" ng-click="searchByPermalink(article.permalink)">{{ article.title | limitTo:40 }}</h3>
+            <p class="cursor-pointer" ng-click="searchByPermalink(article.permalink)">{{article.description | limitTo:100}} ... </p>
+            <p>
+                <div class="btn-group">
+                    <label ng-click="updateVisibility(article._id, true)" class="btn btn-primary btn-sm" ng-model="article.visible" btn-radio="true">Public</label>
+                    <label ng-click="updateVisibility(article._id, false)" class="btn btn-primary btn-sm" ng-model="article.visible" btn-radio="false">Private</label>
+                </div>
+            </p>
+            <div class="bootstrap-tagsinput">
+                <span class="tag label label-danger label-important"
+                    ng-click="searchByTag(tag)" ng-repeat="tag in article.tags">{{ tag }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>

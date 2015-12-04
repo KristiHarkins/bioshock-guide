@@ -1,0 +1,67 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <div class="author-container">
+        <figure>
+            <a href="#">
+                <img class="autor-image" src="[[user.photo]]" width="96" height="96" alt="[[user.name]]" ng-show="!user.photo">
+                <img class="autor-image" ng-src="{{user.photo}}" width="96" height="96" alt="" ng-show="user.photo">
+            </a>
+        </figure>
+
+        <div class="contributor_details">
+            <div class="contributor_name">
+                <a href="#" ng-show="!user.name">[[user.name]]</a>
+                <a href="#" ng-show="user.name">{{user.name}}</a>
+                <p class="article-date">Member since
+                    <time datetime="[[user.createdAt]]">
+                        {{ "[[user.createdAt]]" | date : 'longDate'}}
+                    </time>
+                </p>
+
+                <div class="btn-group-vertical display-block">
+                    <a href="/dashboard/#/listArticle/" type="button" class="btn btn-default no-background-image">My Articles</a>
+                    <a href="/dashboard/#/createArticle/" type="button" class="btn btn-default no-background-image">New article</a>
+                    <a href="/dashboard/#/userProfile/" type="button" class="btn btn-default no-background-image">Profile</a>
+                    <a href="/logout/" type="button" class="btn btn-default no-background-image">Logout</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <div class="panel panel-{{panel}}" ng-view>
+        </div>
+    </div>
+
+    <!-- hightlight sintax -->
+    <link rel="stylesheet" href="../css/default.min.css">
+    <script src="../libs/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="../libs/ng-ckeditor/ng-ckeditor.css">
+    <link rel="stylesheet" href="../libs/ng-tags-input/ng-tags-input.min.css">
+
+    <script src="../libs/angular.min.js"></script>
+    <script src="../libs/angular-route.min.js"></script>
+    <script src="../libs/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../libs/ng-tags-input/ng-tags-input.min.js"></script>
+    <script src="../libs/ng-ckeditor/libs/ckeditor/ckeditor.js"></script>
+    <script src="../libs/ng-ckeditor/src/scripts/02-directive.js"></script>
+    <script src="../libs/ui-bootstrap-custom-tpls-0.12.1.min.js"></script>
+
+    <script src="../js/main.js"></script>
+
+    <script src="../js/controllers/listArticleController.js"></script>
+    <script src="../js/controllers/showArticleController.js"></script>
+    <script src="../js/controllers/upsertArticleController.js"></script>
+    <script src="../js/controllers/userProfileController.js"></script>
+    <script src="../js/controllers/deleteArticleModal.js"></script>
+    <script src="../js/controllers/navBarController.js"></script>
+
+    <script src="../js/directives.js"></script>
+    <script src="../js/filters.js"></script>
+    <script src="../js/services.js"></script>
+
+{% endblock %}
