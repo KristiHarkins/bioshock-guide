@@ -1,34 +1,23 @@
 {
   "name": "bioshock-guide",
   "version": "0.0.0",
+  "homepage": "https://github.com/KristiHarkins/bioshock-guide",
   "authors": [
-      "Kristi Harkins"
-    ],
-    "moduleType": [
-    "node"
-    ],
-    "ignore": [
+    "Kristi Harkins"
+  ],
+  "moduleType": [
+    "es6"
+  ],
+  "license": "MIT",
+  "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
     "test",
     "tests"
-    ],
-    "dependencies": {
-    "angular": "1.4.4",
-    "angular-animate": "1.4.4",
-    "angular-bootstrap": "0.13.3",
-    "angular-resource": "1.4.4",
-    "angular-route": "1.4.4",
-    "angular-scroll": "0.7.2",
-    "bootstrap-sass": "3.3.4"
-    },
-    "overrides": {
-    "bootstrap-sass": {
-      "ignore": true
-      }
-    },
-  "devDependencies": {
-    "angular-mocks": "1.4.4"
+  ],
+  "dependencies": {
+    "ng-tags-input": "2.3.0",
+    "angular-sanitize": "~1.3.15"
   }
 }
