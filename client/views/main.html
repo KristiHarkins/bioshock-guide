@@ -1,0 +1,16 @@
+<div>
+    <header id="top-bar">
+        <strong id="brand">bioshock</strong>
+        <input-search title="title"
+                      def-added="events.defAdded(title)"
+                      def-edit="events.defEdit(title)">
+        </input-search>
+        <username-dropdown></username-dropdown>
+    </header>
+
+    <section class="center-column"
+             id="def-list-container"
+             ng-controller="DefListController">
+        <def-panel ng-repeat="def in definitions"></def-panel>
+    </section>
+</div>

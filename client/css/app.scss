@@ -1,0 +1,153 @@
+@import "variables";
+@import "bootstrap";
+@import "bootstrap/theme";
+@import "mixins";
+
+body {
+  //prevents scrollbars appearing during slide animation
+  //overflow: hidden;
+}
+
+textarea {
+  resize: none;
+}
+
+#brand {
+  @extend .navbar-brand;
+  position: absolute;
+}
+
+#top-bar {
+  @extend .navbar;
+  @extend .navbar-default;
+  @extend .navbar-fixed-top;
+}
+
+.center-column {
+  @include container-fixed();
+  @include make-row();
+  @include make-md-column(6);
+  @include make-md-column-offset(3);
+}
+
+#login-container {
+  margin-top: $navbar-height * 2;
+}
+
+#selectlist-container {
+  margin-top: $navbar-height;
+}
+
+.title-input {
+  @extend .form-control;
+  text-align: center;
+  font-size: $font-size-h2;
+  height: $navbar-height;
+}
+
+#search-btn-container {
+  @include make-md-column(1);
+  padding: 0;
+
+  #search-btn {
+    @extend .btn;
+    height: $navbar-height;
+    width: $navbar-height;
+  }
+
+  .search-icon {
+    @extend .glyphicon;
+    font-size: x-large;
+  }
+
+  .search-icon-default {
+    @extend .glyphicon-search;
+  }
+
+  .search-icon-found {
+    @extend .glyphicon-pencil;
+  }
+
+  .search-icon-makeNew {
+    @extend .glyphicon-plus;
+  }
+}
+
+#username-dropdown {
+  @extend .dropdown;
+  @extend .navbar-right;
+  padding: $navbar-padding-vertical $navbar-padding-horizontal * 2 $navbar-padding-vertical 0;
+}
+
+.description-input {
+  border: 1px solid $input-border;
+  border-radius: $input-border-radius;
+  width: 100%;
+  padding: $padding-base-vertical $padding-base-horizontal;
+}
+
+#def-list-container {
+  margin-top: $navbar-height;
+  margin-bottom: 800px;
+}
+
+.definition {
+  @extend .panel;
+  @extend .panel-default;
+
+  .def-title {
+    text-align: center;
+    font-size: $font-size-h2;
+    display: block;
+    padding: $padding-base-vertical $padding-base-horizontal;
+  }
+
+  .def-description {
+    padding: $padding-base-vertical $padding-base-horizontal;
+  }
+
+  .hover_only {
+    opacity: 0;
+  }
+}
+
+.definition_hover {
+  .hover_only {
+    opacity: 100;
+  }
+  .fake-a {
+    color: $deflink-normal-color;
+    border-bottom: 1px dotted;
+    cursor: pointer;
+    &:hover {
+      color: $deflink-hover-color;
+      border-bottom: 1px solid;
+    }
+  }
+}
+
+.animate.ng-hide-add.ng-hide-add-active,
+.animate.ng-hide-remove.ng-hide-remove-active {
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.animate-left.ng-hide {
+  position: relative;
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+.animate-right.ng-hide {
+  position: relative;
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('http://memry.herokuapp.com/fonts/bootstrap/glyphicons-halflings-regular.eot');
+  src: url('http://memry.herokuapp.com/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('http://memry.herokuapp.com/fonts/bootstrap/glyphicons-halflings-regular.woff2') format('woff2'), url('http://memry.herokuapp.com/fonts/bootstrap/glyphicons-halflings-regular.woff') format('woff'), url('http://memry.herokuapp.com/fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'), url('http://memry.herokuapp.com/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg'); }
